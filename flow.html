@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VenteAutomobile.com - Processus de Vente Détaillé</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .form-control, .form-select {
+            border-radius: 10px;
+        }
+        .btn {
+            border-radius: 10px;
+            padding: 10px 20px;
+        }
+        h2 {
+            color: #0d6efd;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-car-front-fill me-2"></i>VenteAutomobile.com
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="flow.html">Processus de Vente</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm mb-5">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-4">
+                    <i class="bi bi-file-earmark-text me-2"></i>1. Fiche technique du véhicule
+                  </h2>
+                  <p class="card-text">Remplissez toutes les informations essentielles sur le véhicule. Ces détails sont cruciaux pour les acheteurs potentiels et pour établir une base de confiance.</p>
+                  
+                  <form>
+                    <div class="mb-3">
+                      <label for="model" class="form-label">Modèle</label>
+                      <input type="text" class="form-control" id="model" placeholder="Ex: Toyota Camry">
+                    </div>
+                    <div class="mb-3">
+                      <label for="year" class="form-label">Année</label>
+                      <input type="number" class="form-control" id="year" placeholder="Ex: 2018">
+                    </div>
+                    <div class="mb-3">
+                      <label for="vin" class="form-label">Numéro de Série (VIN)</label>
+                      <input type="text" class="form-control" id="vin" placeholder="Ex: 1HGBH41JXMN109186">
+                    </div>
+                    <div class="mb-3">
+                      <label for="mileage" class="form-label">Kilométrage</label>
+                      <input type="number" class="form-control" id="mileage" placeholder="Ex: 50000">
+                    </div>
+                    <div class="mb-3">
+                      <label for="color" class="form-label">Couleur</label>
+                      <input type="text" class="form-control" id="color" placeholder="Ex: Bleu métallisé">
+                    </div>
+                    <div class="mb-3">
+                      <label for="transmission" class="form-label">Transmission</label>
+                      <select class="form-select" id="transmission">
+                        <option selected>Choisissez le type de transmission</option>
+                        <option value="automatique">Automatique</option>
+                        <option value="manuelle">Manuelle</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="fuel" class="form-label">Type de carburant</label>
+                      <select class="form-select" id="fuel">
+                        <option selected>Choisissez le type de carburant</option>
+                        <option value="essence">Essence</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="electrique">Électrique</option>
+                        <option value="hybride">Hybride</option>
+                      </select>
+                    </div>
+                  </form>
+                  
+                  <div class="alert alert-info mt-4" role="alert">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Conseil :</strong> Soyez précis et exhaustif dans vos descriptions. La mention de toute particularité du véhicule peut grandement augmenter l'intérêt des acheteurs potentiels.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm mb-5">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-4">
+                    <i class="bi bi-search me-2"></i>2. Inspection du véhicule
+                  </h2>
+                  <p class="card-text">Une inspection professionnelle est fortement recommandée pour garantir la transparence et la confiance dans la transaction.</p>
+                  <div class="mb-3">
+                    <label for="inspection-report" class="form-label">Rapport d'Inspection</label>
+                    <input type="file" class="form-control" id="inspection-report" accept=".pdf,.doc,.docx">
+                  </div>
+                  <div class="mb-3">
+                    <label for="inspection-date" class="form-label">Date de l'Inspection</label>
+                    <input type="date" class="form-control" id="inspection-date">
+                  </div>
+                  <div class="mb-3">
+                    <label for="inspector" class="form-label">Nom de l'Inspecteur/Entreprise</label>
+                    <input type="text" class="form-control" id="inspector" placeholder="Entrez le nom de l'inspecteur ou de l'entreprise">
+                  </div>
+                  <button class="btn btn-primary">Planifier une Inspection</button>
+                  
+                  <div class="alert alert-info mt-4" role="alert">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Conseil :</strong> Une inspection par un tiers indépendant renforce la crédibilité de votre annonce. N'hésitez pas à partager le rapport complet pour instaurer un climat de confiance avec les acheteurs potentiels.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm mb-5">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-4">
+                    <i class="bi bi-cash me-2"></i>3. Offre d'achat
+                  </h2>
+                  <p class="card-text">Les acheteurs peuvent faire une offre basée sur les informations fournies dans la fiche technique et le rapport d'inspection.</p>
+                  <form>
+                    <div class="mb-3">
+                      <label for="offer-amount" class="form-label">Montant de l'Offre</label>
+                      <input type="number" class="form-control" id="offer-amount" placeholder="Entrez le montant de votre offre">
+                    </div>
+                    <div class="mb-3">
+                      <label for="offer-conditions" class="form-label">Conditions de l'Offre</label>
+                      <textarea class="form-control" id="offer-conditions" rows="3" placeholder="Décrivez les conditions de votre offre (ex: financement, délai de livraison, etc.)"></textarea>
+                    </div>
+                  </form>
+                  <button class="btn btn-success">Soumettre l'Offre</button>
+                  
+                  <div class="alert alert-info mt-4" role="alert">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Conseil :</strong> Basez votre offre sur des données concrètes : l'état du véhicule, son historique et les prix du marché actuel. Une offre réaliste a plus de chances d'être acceptée et de mener à une transaction rapide.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm mb-5">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-4">
+                    <i class="bi bi-file-earmark-text me-2"></i>4. Annexes de divulgation et réparation
+                  </h2>
+                  <p class="card-text">Les annexes incluent tous les détails nécessaires sur l'état du véhicule, les réparations effectuées, et tout problème potentiel. Ces informations sont essentielles pour assurer la transparence.</p>
+                  <div class="mb-3">
+                    <label for="disclosure" class="form-label">Divulgation des Problèmes</label>
+                    <textarea class="form-control" id="disclosure" rows="4" placeholder="Décrivez les problèmes ou réparations du véhicule"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="repair-history" class="form-label">Historique des Réparations</label>
+                    <textarea class="form-control" id="repair-history" rows="4" placeholder="Listez les réparations majeures effectuées sur le véhicule"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="repair-docs" class="form-label">Documents de Réparation</label>
+                    <input type="file" class="form-control" id="repair-docs" accept=".pdf,.doc,.docx" multiple>
+                  </div>
+                  <div class="mb-3">
+                    <label for="accident-history" class="form-label">Historique des Accidents</label>
+                    <textarea class="form-control" id="accident-history" rows="4" placeholder="Décrivez tout accident impliquant le véhicule"></textarea>
+                  </div>
+                  
+                  <div class="alert alert-info mt-4" role="alert">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Conseil :</strong> La transparence est clé. Divulguez tous les détails pertinents, même les petits défauts. Cela renforce la confiance et peut prévenir des litiges futurs. Un acheteur bien informé est un acheteur satisfait.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm mb-5">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-4">
+                    <i class="bi bi-file-earmark-text me-2"></i>5. Contrat de vente
+                  </h2>
+                  <p class="card-text">Générez le contrat de vente une fois que l'offre est acceptée et que toutes les annexes sont complètes. Utilisez l'intégration DocuSign pour la signature numérique.</p>
+                  <div class="mb-3">
+                    <label for="seller-info" class="form-label">Informations du Vendeur</label>
+                    <input type="text" class="form-control" id="seller-info" placeholder="Nom complet du vendeur">
+                  </div>
+                  <div class="mb-3">
+                    <label for="buyer-info" class="form-label">Informations de l'Acheteur</label>
+                    <input type="text" class="form-control" id="buyer-info" placeholder="Nom complet de l'acheteur">
+                  </div>
+                  <div class="mb-3">
+                    <label for="sale-price" class="form-label">Prix de Vente Final</label>
+                    <input type="number" class="form-control" id="sale-price" placeholder="Entrez le prix de vente final">
+                  </div>
+                  <div class="mb-3">
+                    <label for="sale-date" class="form-label">Date de la Vente</label>
+                    <input type="date" class="form-control" id="sale-date">
+                  </div>
+                  <button class="btn btn-primary">Générer le Contrat</button>
+                  
+                  <div class="alert alert-info mt-4" role="alert">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Conseil :</strong> Lisez attentivement chaque clause du contrat. N'hésitez pas à demander des éclaircissements ou à négocier des points spécifiques. Un contrat clair protège les intérêts des deux parties.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm mb-5">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-4">
+                    <i class="bi bi-file-earmark-text me-2"></i>6. Procuration SAAQ
+                  </h2>
+                  <p class="card-text">La procuration de la Société de l'assurance automobile du Québec (SAAQ) est nécessaire pour effectuer le transfert de propriété du véhicule.</p>
+                  <div class="mb-3">
+                    <label for="saaq-form" class="form-label">Formulaire de Procuration SAAQ</label>
+                    <input type="file" class="form-control" id="saaq-form" accept=".pdf">
+                  </div>
+                  <div class="mb-3">
+                    <label for="saaq-instructions" class="form-label">Instructions pour remplir le formulaire</label>
+                    <textarea class="form-control" id="saaq-instructions" rows="4" readonly>
+1. Téléchargez le formulaire de procuration depuis le site de la SAAQ.
+2. Remplissez toutes les informations requises.
+3. Le vendeur et l'acheteur doivent signer le formulaire.
+4. Téléversez le formulaire rempli et signé ci-dessus.
+                    </textarea>
+                  </div>
+                  <button class="btn btn-info">Télécharger le Formulaire SAAQ</button>
+                  
+                  <div class="alert alert-info mt-4" role="alert">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Conseil :</strong> Remplissez ce formulaire avec soin. Une erreur pourrait retarder le transfert de propriété. En cas de doute, n'hésitez pas à contacter directement la SAAQ pour obtenir des clarifications.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm mb-5">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-4">
+                    <i class="bi bi-cash me-2"></i>7. Transfert des Fonds
+                  </h2>
+                  <p class="card-text">Le transfert des fonds peut être effectué de manière sécurisée via des solutions intégrées telles que Stripe, PayPal ou transferts bancaires.</p>
+                  <div class="mb-3">
+                    <label for="payment-method" class="form-label">Méthode de Paiement</label>
+                    <select class="form-select" id="payment-method">
+                      <option selected>Choisissez une méthode de paiement</option>
+                      <option value="stripe">Stripe</option>
+                      <option value="paypal">PayPal</option>
+                      <option value="bank">Transfert Bancaire</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="transfer-amount" class="form-label">Montant à Transférer</label>
+                    <input type="number" class="form-control" id="transfer-amount" placeholder="Entrez le montant à transférer">
+                  </div>
+                  <button class="btn btn-success">Effectuer le Transfert</button>
+                  
+                  <div class="alert alert-info mt-4" role="alert">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Conseil :</strong> Privilégiez des méthodes de paiement sécurisées et traçables. Évitez les transactions en espèces pour des montants importants. Vérifiez que le paiement est bien reçu avant de finaliser le transfert de propriété.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow-sm mb-5">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-4">
+                    <i class="bi bi-car-front-fill me-2"></i>8. Remise du Véhicule
+                  </h2>
+                  <p class="card-text">Cette étape finale comprend la remise physique du véhicule et de tous les documents associés à l'acheteur.</p>
+                  <div class="mb-3">
+                    <label for="handover-date" class="form-label">Date de Remise</label>
+                    <input type="date" class="form-control" id="handover-date">
+                  </div>
+                  <div class="mb-3">
+                    <label for="handover-location" class="form-label">Lieu de Remise</label>
+                    <input type="text" class="form-control" id="handover-location" placeholder="Entrez l'adresse de remise du véhicule">
+                  </div>
+                  <div class="mb-3">
+                    <label for="handover-checklist" class="form-label">Liste de Vérification pour la Remise</label>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="keys">
+                        <label class="form-check-label" for="keys">Remise des clés</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="manual">
+                        <label class="form-check-label" for="manual">Manuel du propriétaire</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="service-book">
+                        <label class="form-check-label" for="service-book">Carnet d'entretien</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="registration">
+                        <label class="form-check-label" for="registration">Certificat d'immatriculation</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <button class="btn btn-primary">Confirmer la Remise</button>
+                  
+                  <div class="alert alert-info mt-4" role="alert">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <strong>Conseil :</strong> Préparez une checklist détaillée pour la remise. Assurez-vous de transmettre tous les documents, clés et accessoires. Un transfert bien organisé laisse une dernière bonne impression et facilite la transition pour le nouveau propriétaire.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 VenteAutomobile.com - Simplifiez la vente de votre véhicule.</p>
+            <div class="mt-3">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
